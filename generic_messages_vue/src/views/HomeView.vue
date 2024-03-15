@@ -24,7 +24,7 @@
         </v-alert-title>
 
         <v-alert-text>
-            This apps offers predefined messages that
+            This app offers predefined messages that
             you can send to your friends via Whatsapp. These messages
             are categorized, so you can choose all of
             kind of messages (Love, Motivational, Movie phrases).
