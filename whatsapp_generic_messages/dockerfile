@@ -1,0 +1,5 @@
+FROM python:3.11-alpine
+ENV PYTHONUNBUFFERED 1
+WORKDIR /whatsapp_generic_messages
+COPY . .
+RUN pip install -r requirements.txt

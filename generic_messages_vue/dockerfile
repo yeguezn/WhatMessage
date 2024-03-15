@@ -1,0 +1,4 @@
+FROM node:current-alpine
+WORKDIR /generic_messages_vue
+COPY . .
+RUN npm install
