@@ -28,9 +28,9 @@ docker compose up
 ```bash
 docker exec -i <DB_CONTAINER_ID> psql -U prueba -d genericMessages < genericMessages.sql
 ```
-(You can get the `DB_CONTAINER_ID` running the `docker ps command`)
+(You can get the `DB_CONTAINER_ID` running the `docker ps` command)
 
-5. Return to the terminal tab where you ran the `docker compose up`and press crtl + c
+5. Return to the terminal tab where you ran the `docker compose up` command and press crtl + c
 
 6. Run the `docker compose up` command again
 ```bash
