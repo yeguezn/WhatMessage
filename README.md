@@ -2,13 +2,13 @@
 This app offers predefined messages that you can send to your friends via Whatsapp. These messages are categorized, so you can choose all of kind of messages (Love, Motivational, Movie phrases).
 
 # DB credentials
-username: prueba
-password: root
+- username: prueba
+- password: root
 
 # Admin credentials
 If you want to add more categories and messages, go to http://localhost:8000/admin and log in with the following credentials
-username: admin
-password: 1234
+- username: admin
+- password: 1234
 
 # Set Up
 1. Clone this repository
