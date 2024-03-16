@@ -23,7 +23,7 @@
 
         <h1 v-if="contacts.length === 0" 
         class="text-center title text-green mt-5">
-            You do not contacts yet.
+            You do not have contacts yet.
         </h1>
         <h2 v-if="contacts.length === 0"
         class="text-center text-h3 mt-5">
