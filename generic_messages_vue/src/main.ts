@@ -13,7 +13,7 @@ const vuetify = createVuetify({
   directives
 })
 
-axios.defaults.baseURL = "http://0.0.0.0:8000"
+axios.defaults.baseURL = "http://localhost:8000"
 
 const app = createApp(App)
 
