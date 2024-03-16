@@ -1,8 +1,0 @@
-# Dockerfile
-FROM node:lts-alpine
-WORKDIR /generic_messages_vue
-COPY package*.json ./
-RUN npm install
-COPY . .
-CMD ["npm", "run", "dev"]
-
