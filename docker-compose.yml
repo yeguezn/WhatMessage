@@ -6,7 +6,6 @@ services:
     container_name: db-container
     volumes:
       - ./database_data/genericMessages.sql:/docker-entrypoint-initdb.d/genericMessages.sql
-      - ./data/db:/var/lib/postgresql/data
     environment:
       - POSTGRES_DB=genericMessages
       - POSTGRES_USER=prueba
