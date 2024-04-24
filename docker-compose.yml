@@ -3,28 +3,31 @@ version: '3.9'
 services:
   db:
     image: postgres
+    container_name: db-container
     volumes:
       - ./data/db:/var/lib/postgresql/data
     environment:
       - POSTGRES_DB=genericMessages
       - POSTGRES_USER=prueba
       - POSTGRES_PASSWORD=root
+
   whatsapp_generic_messages:
     build: ./whatsapp_generic_messages
-    command: python manage.py runserver 0.0.0.0:8000
+    container_name: backend-container
     volumes:
       - ./whatsapp_generic_messages:/whatsapp_generic_messages
     ports:
-      - "8000:8000"
+      - 8000:8000
     depends_on:
       - db
+
   generic_messages_vue:
     build: ./generic_messages_vue
-    command: npm run dev -- --host
+    container_name: frontend-container
     volumes:
       - ./generic_messages_vue:/generic_messages_vue
       - /generic_messages_vue/node_modules
     ports:
-      - "5173:5173"
+      - 5173:5173
     depends_on:
       - whatsapp_generic_messages

@@ -12,29 +12,40 @@ If you want to add more categories and messages, go to http://localhost:8000/adm
 
 # Set Up
 1. Clone this repository
-```bash
-git clone https://github.com/yeguezn/WhatMessage.git
-```
+    
+    ```bash
+    git clone https://github.com/yeguezn/WhatMessage.git
+    ```
+
 2. Get into the directory
-```bash
-cd WhatMessage
-```
+    
+    ```bash
+    cd WhatMessage
+    ```
+
 3. Run the following command
-```bash
-docker compose up
-```
+    
+    ## Linux
+    ```bash
+    sudo docker compose up -d
+    ```
 
-4. Open a new terminal tab in the project directory and run the following command in order to import the database
-```bash
-docker exec -i <DB_CONTAINER_ID> psql -U prueba -d genericMessages < genericMessages.sql
-```
-(You can get the `DB_CONTAINER_ID` running the `docker ps` command)
+    ## Windows
+    ```bash
+    docker compose up -d
+    ```
 
-5. Return to the terminal tab where you ran the `docker compose up` command and press crtl + c
+4. Run the following command in order to import the database
+    
+    ## Linux
+    ```bash
+    sudo docker exec -i db-container psql -U prueba -d genericMessages < genericMessages.sql
+    ```
+    
+    ## Windows
+    ```bash
+    docker exec -i db-container psql -U prueba -d genericMessages < genericMessages.sql
+    ```
 
-6. Run the `docker compose up` command again
-```bash
-docker compose up
-```
-7. Open this link http://localhost:5173
+5. Open this link http://localhost:5173
 
