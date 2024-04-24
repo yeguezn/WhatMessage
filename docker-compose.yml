@@ -10,6 +10,8 @@ services:
       - POSTGRES_DB=genericMessages
       - POSTGRES_USER=prueba
       - POSTGRES_PASSWORD=root
+    ports:
+        - 5432:5432
 
   whatsapp_generic_messages:
     build: ./whatsapp_generic_messages
