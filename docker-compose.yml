@@ -5,14 +5,12 @@ services:
     image: postgres
     container_name: db-container
     volumes:
-      - ./database_data/genericMessages.sql:/docker-entrypoint-initdb.d/genericMessages.sql
+      - ./genericMessages.sql:/docker-entrypoint-initdb.d/genericMessages.sql
     environment:
       - POSTGRES_DB=genericMessages
       - POSTGRES_USER=prueba
       - POSTGRES_PASSWORD=root
-    ports:
-        - 5000:5432
-
+  
   whatsapp_generic_messages:
     build: ./whatsapp_generic_messages
     container_name: backend-container
