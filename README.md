@@ -41,5 +41,17 @@ If you want to add more categories and messages, go to http://localhost:8000/adm
     docker cp genericMessages.sql db-container:/docker-entrypoint-initdb.d/
     ```
 
-4. Open this link http://localhost:5173
+4. Import database
+
+    ## Linux
+    ```bash
+    sudo docker exec -i db-container psql -U prueba -d genericMessages < genericMessages.sql
+    ```
+
+    ## Windows
+    ```bash
+    docker exec -i db-container psql -U prueba -d genericMessages < genericMessages.sql
+    ```
+
+5. Open this link http://localhost:5173
 
