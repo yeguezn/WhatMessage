@@ -16,6 +16,7 @@ services:
   whatsapp_generic_messages:
     build: ./whatsapp_generic_messages
     container_name: backend-container
+    command: python manage.py runserver 0.0.0.0:8000
     volumes:
       - ./whatsapp_generic_messages:/whatsapp_generic_messages
     ports:
@@ -26,6 +27,7 @@ services:
   generic_messages_vue:
     build: ./generic_messages_vue
     container_name: frontend-container
+    command: npm run dev -- --host
     volumes:
       - ./generic_messages_vue:/generic_messages_vue
       - /generic_messages_vue/node_modules
