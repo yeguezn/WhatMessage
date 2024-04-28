@@ -14,7 +14,7 @@ services:
   whatsapp_generic_messages:
     build: ./whatsapp_generic_messages
     container_name: backend-container
-    command: python manage.py runserver 0.0.0.0:8000
+    command: ["./whatsapp_generic_messages/wait-for-it.sh", "db:5432", "--", "python", "manage.py", "runserver", "0.0.0.0:8000"]
     volumes:
       - ./whatsapp_generic_messages:/whatsapp_generic_messages
     ports:
