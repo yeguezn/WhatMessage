@@ -1,5 +1,7 @@
-FROM python:3.11-alpine
-ENV PYTHONUNBUFFERED 1
+# syntax=docker/dockerfile:1
+FROM python:3
+ENV PYTHONUNBUFFERED=1
 WORKDIR /whatsapp_generic_messages
-COPY . .
+COPY requirements.txt /whatsapp_generic_messages/
 RUN pip install -r requirements.txt
+COPY . /whatsapp_generic_messages/
