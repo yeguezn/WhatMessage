@@ -9,7 +9,7 @@ class ContactSerializer(serializers.ModelSerializer):
         fields = ("id", "full_name", "phone_number")
     
     def validate_phone_number(self, value):
-        if not re.search("^\+(?:[0-9] ?){6,14}[0-9]$", value):
+        if not re.search("^\\+(?:[0-9] ?){6,14}[0-9]$", value):
             raise serializers.ValidationError(
                 "The phone number must match with the international format."
             )
