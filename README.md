@@ -21,19 +21,19 @@ If you want to add more categories and messages, go to http://localhost:8000/adm
     
     ## Linux
     ```bash
-    sudo docker compose up -d
+    docker-compose up -d
     ```
 
     ## Windows
     ```bash
-    docker compose up -d
+    docker-compose up -d
     ```
 
 3. Copy the genericMessages.sql file to your Docker container
     
     ## Linux
     ```bash
-    sudo docker cp genericMessages.sql db-container:/docker-entrypoint-initdb.d/
+    docker cp genericMessages.sql db-container:/docker-entrypoint-initdb.d/
     ```
     
     ## Windows
@@ -45,7 +45,7 @@ If you want to add more categories and messages, go to http://localhost:8000/adm
 
     ## Linux
     ```bash
-    sudo docker exec -i db-container psql -U prueba -d genericMessages < genericMessages.sql
+    docker exec -i db-container psql -U prueba -d genericMessages < genericMessages.sql
     ```
 
     ## Windows

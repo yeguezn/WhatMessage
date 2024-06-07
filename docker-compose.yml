@@ -5,6 +5,7 @@ services:
     image: postgres
     container_name: db-container
     volumes:
+      - ./sql_dump:/docker-entrypoint-initdb.d
       - ./psql_data:/var/lib/postgresql/data
     environment:
       - POSTGRES_DB=genericMessages
